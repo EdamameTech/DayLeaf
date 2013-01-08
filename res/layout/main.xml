@@ -11,5 +11,12 @@
         android:layout_gravity="center"
         android:src="@drawable/ic_launcher"
         android:background="#00000000" />
-
+        
+	<TextView
+		android:id="@+id/label"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="@string/widget_label" />
+		
 </LinearLayout>
