@@ -17,6 +17,9 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:layout_gravity="center"
-		android:text="@string/widget_label" />
+		android:text="@string/widget_label"
+		android:textColor="#aaa"
+		android:gravity="center"
+		android:background="@drawable/widget_label_background" />
 		
 </LinearLayout>
