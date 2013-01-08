@@ -33,6 +33,7 @@ public class DropMemoAppWidgetProvider extends AppWidgetProvider {
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.main);
             views.setOnClickPendingIntent(R.id.widget_button, pendingIntent);
             views.setTextViewText(R.id.widget_label, directoryName + "/\n" + currentFilename);
+            views.setOnClickPendingIntent(R.id.widget_label, pendingIntent);
             appWidgetManager.updateAppWidget(appWidgetId, views);
         }
         super.onUpdate(context, appWidgetManager, appWidgetIds);
