@@ -18,6 +18,8 @@ public class DropMemoAppWidgetProvider extends AppWidgetProvider {
     SimpleDateFormat filenameFormatter = new SimpleDateFormat(filenameFormat);
     String directory = Environment.getExternalStoragePublicDirectory(
             Environment.DIRECTORY_DOWNLOADS).toString();
+    String[] directoryNameAry = directory.split("/");
+    String directoryName = directoryNameAry[directoryNameAry.length - 1];
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
@@ -30,7 +32,7 @@ public class DropMemoAppWidgetProvider extends AppWidgetProvider {
             PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.main);
             views.setOnClickPendingIntent(R.id.widget_button, pendingIntent);
-            views.setTextViewText(R.id.widget_label, currentFilename);
+            views.setTextViewText(R.id.widget_label, directoryName + "/\n" + currentFilename);
             appWidgetManager.updateAppWidget(appWidgetId, views);
         }
         super.onUpdate(context, appWidgetManager, appWidgetIds);
