@@ -25,12 +25,12 @@ public class DropMemoAppWidgetProvider extends AppWidgetProvider {
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         final int NWidgets = appWidgetIds.length;
         String currentFilename = filename(new Date());
+        Intent intent = new Intent(Intent.ACTION_EDIT);
+        intent.setDataAndType(Uri.parse("file:/" + directory + "/" + currentFilename), "text/plain");
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.main);
         for (int i = 0; i < NWidgets; i++) {
             int appWidgetId = appWidgetIds[i];
-            Intent intent = new Intent(Intent.ACTION_EDIT);
-            intent.setDataAndType(Uri.parse("file:/" + directory + "/" + currentFilename), "text/plain");
-            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
-            RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.main);
             views.setOnClickPendingIntent(R.id.widget_button, pendingIntent);
             views.setTextViewText(R.id.widget_label, directoryName + "/\n" + currentFilename);
             views.setOnClickPendingIntent(R.id.widget_label, pendingIntent);
