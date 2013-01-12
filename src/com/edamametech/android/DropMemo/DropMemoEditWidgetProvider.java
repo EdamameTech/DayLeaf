@@ -10,7 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
 
-public class DropMemoAppWidgetProvider extends AppWidgetProvider {
+public class DropMemoEditWidgetProvider extends AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         final int NWidgets = appWidgetIds.length;
