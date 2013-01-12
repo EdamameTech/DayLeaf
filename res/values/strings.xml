@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">DropMemo</string>
+    <string name="edit_widget_name">DropMemo - Edit</string>
+    <string name="send_widget_name">DropMemo - Send</string>
 	<string name="widget_label">DropMemo</string>
 </resources>
