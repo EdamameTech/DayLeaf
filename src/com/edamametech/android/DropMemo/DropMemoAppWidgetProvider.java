@@ -18,7 +18,7 @@ public class DropMemoAppWidgetProvider extends AppWidgetProvider {
         Intent intent = new Intent(Intent.ACTION_EDIT);
         intent.setDataAndType(path.uri(), "text/plain");
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.main);
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.edit);
         for (int i = 0; i < NWidgets; i++) {
             int appWidgetId = appWidgetIds[i];
             views.setOnClickPendingIntent(R.id.widget_button, pendingIntent);
