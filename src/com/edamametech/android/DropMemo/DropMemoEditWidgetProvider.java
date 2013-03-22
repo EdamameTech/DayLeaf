@@ -13,6 +13,7 @@ public class DropMemoEditWidgetProvider extends DropMemoWidgetProvider {
         path = new DropMemoUtil.FilePath(new Date());
         intent = new Intent(Intent.ACTION_EDIT);
         intent.setDataAndType(path.uri(), "text/plain");
+        intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         layout = R.layout.edit;
         super.onUpdate(context, appWidgetManager, appWidgetIds);
     }

@@ -14,6 +14,7 @@ public class DropMemoSendWidgetProvider extends DropMemoWidgetProvider {
         intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_STREAM, path.uri());
+        intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         layout = R.layout.send;
         super.onUpdate(context, appWidgetManager, appWidgetIds);
     }
