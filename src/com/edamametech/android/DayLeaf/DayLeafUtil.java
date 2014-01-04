@@ -32,7 +32,7 @@ public class DayLeafUtil {
         }
 
         Uri uri() {
-            return Uri.parse("file:/" + directory() + "/" + filename());
+            return Uri.parse("file://" + directory() + "/" + filename());
         }
     }
 
