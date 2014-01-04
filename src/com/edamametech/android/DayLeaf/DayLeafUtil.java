@@ -1,16 +1,20 @@
 
 package com.edamametech.android.DayLeaf;
 
+import android.annotation.SuppressLint;
 import android.net.Uri;
 import android.os.Environment;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class DayLeafUtil {
+    @SuppressLint("SimpleDateFormat")
     static public class FilePath {
         private final String filenameFormat = "yyMMdd'.txt'";
-        private final SimpleDateFormat filenameFormatter = new SimpleDateFormat(filenameFormat);
+        private final SimpleDateFormat filenameFormatter = new SimpleDateFormat(filenameFormat,
+                Locale.US);
         Date date;
 
         FilePath(Date d) {
