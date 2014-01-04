@@ -1,5 +1,5 @@
 
-package com.edamametech.android.DropMemo;
+package com.edamametech.android.DayLeaf;
 
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
@@ -7,15 +7,14 @@ import android.content.Intent;
 
 import java.util.Date;
 
-public class DropMemoSendWidgetProvider extends DropMemoWidgetProvider {
+public class DayLeafEditWidgetProvider extends DayLeafWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        path = new DropMemoUtil.FilePath(new Date());
-        intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_STREAM, path.uri());
+        path = new DayLeafUtil.FilePath(new Date());
+        intent = new Intent(Intent.ACTION_EDIT);
+        intent.setDataAndType(path.uri(), "text/plain");
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        layout = R.layout.send;
+        layout = R.layout.edit;
         super.onUpdate(context, appWidgetManager, appWidgetIds);
     }
 }

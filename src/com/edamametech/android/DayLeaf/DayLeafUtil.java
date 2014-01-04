@@ -1,5 +1,5 @@
 
-package com.edamametech.android.DropMemo;
+package com.edamametech.android.DayLeaf;
 
 import android.net.Uri;
 import android.os.Environment;
@@ -7,7 +7,7 @@ import android.os.Environment;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class DropMemoUtil {
+public class DayLeafUtil {
     static public class FilePath {
         private final String filenameFormat = "yyMMdd'.txt'";
         private final SimpleDateFormat filenameFormatter = new SimpleDateFormat(filenameFormat);

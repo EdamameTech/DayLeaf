@@ -1,5 +1,5 @@
 
-package com.edamametech.android.DropMemo;
+package com.edamametech.android.DayLeaf;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -8,10 +8,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
 
-public class DropMemoWidgetProvider extends AppWidgetProvider {
+public class DayLeafWidgetProvider extends AppWidgetProvider {
     Intent intent;
     Integer layout;
-    DropMemoUtil.FilePath path;
+    DayLeafUtil.FilePath path;
     
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {

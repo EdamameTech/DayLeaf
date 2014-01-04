@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.edamametech.android.DropMemo"
+    package="com.edamametech.android.DayLeaf"
     android:versionCode="1"
     android:versionName="0.0" >
 
@@ -11,7 +11,7 @@
         android:label="@string/app_name" >
         <receiver
             android:label="@string/edit_widget_name"
-            android:name=".DropMemoEditWidgetProvider" >
+            android:name=".DayLeafEditWidgetProvider" >
             <intent-filter >
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -23,7 +23,7 @@
 
         <receiver
             android:label="@string/send_widget_name"
-            android:name=".DropMemoSendWidgetProvider" >
+            android:name=".DayLeafSendWidgetProvider" >
             <intent-filter >
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
