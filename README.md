@@ -8,6 +8,7 @@ Usage
 This application only provides widgets that work as short-cuts to
 - start editing a text file and
 - send the text file.
+
 Long tap home screen to add the two widgets, `DayLeaf - Edit` and
 `DayLeaf - Send`.
 
