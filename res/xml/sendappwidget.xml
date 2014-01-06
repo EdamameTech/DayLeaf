@@ -3,4 +3,5 @@
     android:initialLayout="@layout/edit"
     android:minHeight="72dp"
     android:minWidth="72dp"
+    android:previewImage="@android:drawable/ic_menu_send"
     android:updatePeriodMillis="7200000" />
